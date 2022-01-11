@@ -1,10 +1,12 @@
+
 package os;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Fcfs {
 
+public class PS {
+      
     private static int n;
     private static int process[];
     private static int bt[];
@@ -12,9 +14,9 @@ public class Fcfs {
     private static int ct[];
     private static int tat[];
     private static int wt[];
-    private static int avg = 0;
-    private static int totalTat = 0;
-
+    private static double avg = 0;
+    private static double totalTat = 0;
+    
     static void compleatingTime() {
         ct = new int[n];
         int arr[] = at.clone();
@@ -36,7 +38,7 @@ public class Fcfs {
     static void calculateTat() {
         tat = new int[n];
         for (int i = 0; i < n; i++) {
-            tat[i] = ct[i] - at[i];
+            tat[i] = ct[i] - 0;
             totalTat += tat[i];
         }
     }
@@ -50,7 +52,7 @@ public class Fcfs {
     }
 
     static void print() {
-        System.out.println("FCFS ");
+       
         for(int i=0; i<n; i++){
             System.out.println(process[i]+" "+ at[i]+" "+bt[i]+ " "+ct[i]+" "+tat[i]+" "+wt[i]);
         }
@@ -83,7 +85,7 @@ public class Fcfs {
             bt[i] = sc.nextInt();
         }
         
-        System.out.println("Enter Arival Time : ");
+        System.out.println("Enter Priority Scheduling : ");
 
         for (int i = 0; i < n; i++) {
             at[i] = sc.nextInt();
